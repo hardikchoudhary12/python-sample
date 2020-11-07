@@ -50,7 +50,7 @@ def strip_punctuation(stringname):
   return stringname.translate(table)
 
 def dictionary_of_file(filename):
-  filetoread = open(filename, 'rU')
+  filetoread = open(filename, 'r)
   listofwords = []
   for line in filetoread:
     currentlinelist = line.split()
