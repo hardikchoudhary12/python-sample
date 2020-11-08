@@ -44,7 +44,7 @@ import string
 # You could write a helper utility function that reads a file
 # and builds and returns a word/count dict for it.
 # Then print_words() and print_top() can just call the utility function.
-
+#strips punctuation from a word
 def strip_punctuation(stringname):
   table = str.maketrans(dict.fromkeys(string.punctuation))
   return stringname.translate(table)
