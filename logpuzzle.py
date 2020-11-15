@@ -38,7 +38,7 @@ def read_urls(filename):
   return sorted(list_of_puzzle_urls)
   # +++your code here+++
 
-def specificFunction(singleUrl):
+def sortBySecondWord(singleUrl):
   print("singleUrl : " + singleUrl)
   match = re.search("/puzzle/(\w+)-(\w+)-(\w+)", singleUrl)
   print("match.group(3) " + match.group(3))
@@ -48,13 +48,13 @@ def download_images(img_urls, dest_dir):
   """Given the urls already in the correct order, downloads
   each image into the given directory.
   Gives the images local filenames img0, img1, and so on.
-  Creates an index.html in the directory
+  Creates an finalfile.html in the directory
   with an img tag to show each local image file.
   Creates the directory if necessary.
   """
   #list_of_puzzle_urls = read_urls("animal_code.google.com") 
   list_of_puzzle_urls = read_urls("place_code.google.com")
-  list_of_puzzle_urls = sorted(list_of_puzzle_urls,key=specificFunction)
+  list_of_puzzle_urls = sorted(list_of_puzzle_urls,key=sortBySecondWord)
   i = 1
   for url in list_of_puzzle_urls:
     print("Downloading img" + str(i))
